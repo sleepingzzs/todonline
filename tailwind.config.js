@@ -6,6 +6,11 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			screens: {
+				lg: {
+					max: "1200px",
+				},
+			},
 			fontFamily: {
 				poppins: "Poppins",
 			},

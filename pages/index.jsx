@@ -1,9 +1,8 @@
-import type { NextPage } from "next";
 import Head from "next/head";
 
-const Home: NextPage = () => {
+const Home = () => {
 	return (
-		<div className=''>
+		<div className='' id='root'>
 			<div>hello world </div>
 		</div>
 	);

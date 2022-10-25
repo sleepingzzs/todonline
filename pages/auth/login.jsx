@@ -1,8 +1,7 @@
-import { NextPage } from "next";
 import { FcGoogle as Google } from "react-icons/fc";
 import { FaGithub as Github } from "react-icons/fa";
 
-const Login: NextPage = () => {
+const Login = () => {
 	return (
 		<div className='flex flex-col justify-center shadow-xl mt-32 p-10 rounded-lg max-w-[550px] mx-auto'>
 			<h2 className='text-[26px] font-semibold'>
@@ -22,6 +21,13 @@ const Login: NextPage = () => {
 					type='password'
 					placeholder='password'
 				/>
+				<div className='my-2'></div>
+				<button
+					type='submit'
+					className='text-white bg-cyan-500 rounded-lg h-10'
+				>
+					Login
+				</button>
 			</div>
 			<div className='flex flex-col mx-auto '>
 				<h4>Other sign in options</h4>
