@@ -2,16 +2,25 @@ import { NextPage } from "next";
 import { FcGoogle as Google } from "react-icons/fc";
 import { FaGithub as Github } from "react-icons/fa";
 import { ImCross as Cross } from "react-icons/im";
+import rd from "react-dom";
 
 export default function Login() {
+	function unrenderSignin() {
+		typeof window !== "undefined"
+			? rd.unmountComponentAtNode(document.getElementById("root"))
+			: null;
+	}
 	return (
-		<div className='flex flex-col justify-center align-baseline p-10 rounded-lg max-w-[550px] mx-auto'>
-			<div className='flex justify-end text-red-500 border-x border-t p-2 rounded-t-lg'>
-				<button>
+		<div
+			className='flex flex-col justify-center mt-0 h-[90vh] align-middle p-10 rounded-lg max-w-[550px] mx-auto z-0 '
+			id='login'
+		>
+			<div className='flex justify-end text-red-500 border-x border-t p-5 rounded-t-lg'>
+				<button onClick={unrenderSignin}>
 					<Cross></Cross>
 				</button>
 			</div>
-			<div className='border-x border-b p-10 rounded-b-lg'>
+			<div className='border-x border-b px-10 pb-10 pt-0 rounded-b-lg'>
 				<h2 className='text-[26px] font-semibold'>
 					Sign up and start posting today!
 				</h2>

@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Login from "../components/Login";
+import StateContext from "../components/Navbar";
 
 const Home = () => {
 	return (

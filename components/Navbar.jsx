@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
 import Link from "next/link";
-import rd from "react-dom";
+import { render } from "react-dom";
 import {
 	AiOutlineFire as Trending,
 	AiFillFire as TrendingActive,
@@ -9,17 +8,12 @@ import {
 	AiOutlinePlusCircle as Post,
 	AiFillPlusCircle as PostActive,
 } from "react-icons/ai";
-
 import Login from "./Login";
 
 export default function Nav() {
-	const [isClicked, setIsClicked] = useState(false);
-	const buttonHandler = () => {
-		setIsClicked((p) => !p);
-	};
-	useEffect(() => {}, [isClicked]);
-
-	const nothing = () => {};
+	function renderSignin() {
+		render(<Login />, document.getElementById("root"));
+	}
 
 	return (
 		<nav className='border-b-2 py-2 px-2'>
@@ -30,29 +24,23 @@ export default function Nav() {
 					</button>
 				</Link>
 				<div className='flex text-[32px] gap-3'>
-					<button href='#'>
-						<Trending />
+					<button>
+						<Trending></Trending>
 					</button>
-					<button href='#'>
+					<button>
 						<Post></Post>
 					</button>
-					<button href='#'>
+					<button>
 						<Home></Home>
 					</button>
 				</div>
 				<ul className='gap-2 '>
 					<button
-						onClick={buttonHandler}
+						onClick={renderSignin}
 						className='bg-cyan-500 rounded-lg py-2 px-4 text-white'
 						id='Signin'
 					>
-						{"Sign up"}
-						{isClicked
-							? rd.render(
-									<Login />,
-									document.getElementById("root")
-							  )
-							: nothing}
+						Sign up
 					</button>
 				</ul>
 			</div>
