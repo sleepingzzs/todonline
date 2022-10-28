@@ -1,14 +1,11 @@
-import { NextPage } from "next";
 import { FcGoogle as Google } from "react-icons/fc";
 import { FaGithub as Github } from "react-icons/fa";
 import { ImCross as Cross } from "react-icons/im";
-import rd from "react-dom";
+import { unmountComponentAtNode } from "react-dom";
 
 export default function Login() {
 	function unrenderSignin() {
-		typeof window !== "undefined"
-			? rd.unmountComponentAtNode(document.getElementById("root"))
-			: null;
+		unmountComponentAtNode(document.getElementById("root"));
 	}
 	return (
 		<div
@@ -24,7 +21,7 @@ export default function Login() {
 				<h2 className='text-[26px] font-semibold'>
 					Sign up and start posting today!
 				</h2>
-				<div className='flex flex-col my-10'>
+				<form className='flex flex-col my-10'>
 					<h4>Email</h4>
 					<input
 						className='border-2 h-12 rounded-lg pl-2'
@@ -45,7 +42,7 @@ export default function Login() {
 					>
 						Login
 					</button>
-				</div>
+				</form>
 				<div className='flex flex-col mx-auto '>
 					<h4 className='flex justify-center'>
 						Other sign in options

@@ -10,11 +10,10 @@ import {
 } from "react-icons/ai";
 import Login from "./Login";
 
+function renderSignin() {
+	render(<Login />, document.getElementById("root"));
+}
 export default function Nav() {
-	function renderSignin() {
-		render(<Login />, document.getElementById("root"));
-	}
-
 	return (
 		<nav className='border-b-2 py-2 px-2'>
 			<div className='flex justify-between lg:justify-between items-center mx-6 md:max-w-5xl md:mx-auto'>
