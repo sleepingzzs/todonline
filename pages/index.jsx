@@ -1,13 +1,7 @@
-import Head from "next/head";
-import Login from "../components/Login";
-import StateContext from "../components/Navbar";
-
-const Home = () => {
+export default function Home() {
 	return (
-		<div className='' id='root'>
+		<div id='root'>
 			<div>hello world </div>
 		</div>
 	);
-};
-
-export default Home;
+}
