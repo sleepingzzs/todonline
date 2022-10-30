@@ -11,9 +11,8 @@ export const authOptions = {
 		}),
 		GoogleProvider({
 			clientId: process.env.GOOGLE_ID,
-			clientSecret: process.env.GOOLE_SECRET,
+			clientSecret: process.env.GOOGLE_SECRET,
 		}),
 	],
-	secret: process.env.JWT_SECRET,
 };
 export default NextAuth(authOptions);
