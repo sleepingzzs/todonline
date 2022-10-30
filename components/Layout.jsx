@@ -1,11 +1,10 @@
 import Head from "next/head";
 import Nav from "./Navbar";
-import Login from "../pages/Login";
 import { useRouter } from "next/router";
 
 export default function Layout({ children }) {
 	const router = useRouter();
-	const showNav = router.pathname === "/Login" ? true : false;
+	const showNav = router.pathname === "/auth/login" ? true : false;
 	return (
 		<div className='font-poppins'>
 			<Head>

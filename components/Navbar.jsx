@@ -29,7 +29,7 @@ export default function Nav() {
 					</button>
 				</div>
 				<ul className='gap-2 '>
-					<Link href={"Login"}>
+					<Link href={"auth/login"}>
 						<button className='bg-cyan-500 rounded-lg py-2 px-4 text-white'>
 							Sign in
 						</button>
