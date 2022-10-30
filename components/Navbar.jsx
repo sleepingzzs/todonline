@@ -10,7 +10,7 @@ import {
 
 export default function Nav() {
 	return (
-		<nav className='border-b-2 py-2 px-2'>
+		<nav className='border-b border-slate-300 py-2 px-2 bg-white max-h-[12vh]'>
 			<div className='flex justify-between lg:justify-between items-center mx-6 md:max-w-5xl md:mx-auto'>
 				<Link href='/'>
 					<button className='font-semibold tracking-wide text-[24px] italic none selection:b-none'>

@@ -15,10 +15,10 @@ export default function Login() {
 	}
 	return (
 		<div
-			className='flex flex-col justify-center mt-0 h-screen align-middle p-10 rounded-lg max-w-[550px] mx-auto z-0 '
+			className='flex flex-col justify-center mt-0 h-screen align-middle p-10 rounded-lg max-w-[550px] mx-auto'
 			id='login'
 		>
-			<div className='flex border-x border-t py-5 pl-10 rounded-t-lg text-gray-700 '>
+			<div className='flex border-x border-t py-5 pl-10 rounded-t-lg text-gray-700 bg-white border-slate-300'>
 				<Link href={"/"}>
 					<button className='flex flex-row text-sm'>
 						<Back className='text-xl'></Back>
@@ -26,7 +26,7 @@ export default function Login() {
 					</button>
 				</Link>
 			</div>
-			<div className='border-x border-b px-10 pb-10 pt-0 rounded-b-lg'>
+			<div className='border-x border-b px-10 pb-10 pt-0 rounded-b-lg bg-white border-slate-300'>
 				<h2 className='text-[26px] font-semibold'>
 					Sign up and start posting today!
 				</h2>
