@@ -12,9 +12,9 @@ export default function Nav() {
 		<nav className='border-b border-slate-300 py-2 px-2 bg-white z-3 '>
 			<div className='flex justify-between lg:justify-between items-center mx-6 md:max-w-5xl md:mx-auto '>
 				<Link href='/'>
-					<Logo className='h-[50px] w-[150px] cursor-pointer'></Logo>
+					<Logo className='h-[50px] w-[175px] cursor-pointer'></Logo>
 				</Link>
-				<div className='flex gap-2 text-[22px]'>
+				<div className='flex gap-2 text-[24px]'>
 					<Link href='/'>
 						<button>
 							{location.pathname === "/" ? <Home2 /> : <Home />}
@@ -26,9 +26,9 @@ export default function Nav() {
 					<Link href='favorites'>
 						<button>
 							{location.pathname === "/favorites" ? (
-								<Fav2 className='text-[25px]' />
+								<Fav2 className='text-[28px]' />
 							) : (
-								<Fav className='text-[25px]' />
+								<Fav className='text-[28px]' />
 							)}
 						</button>
 					</Link>

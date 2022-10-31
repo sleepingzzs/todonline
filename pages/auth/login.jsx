@@ -30,17 +30,17 @@ export default function Login() {
 				<h2 className='text-[26px] font-semibold'>
 					Sign up and start posting today!
 				</h2>
-				<form className='flex flex-col my-10'>
+				<form className='flex flex-col my-7'>
 					<h4>Email</h4>
 					<input
-						className='border-2 h-12 rounded-lg pl-2'
+						className='border-2 h-10 rounded-lg pl-2'
 						type='email'
 						placeholder='email@example.com'
 					/>
 					<div className='my-1'></div>
 					<h4>Password</h4>
 					<input
-						className='border-2 h-12 rounded-lg pl-2'
+						className='border-2 h-10 rounded-lg pl-2'
 						type='password'
 						placeholder='password'
 					/>
