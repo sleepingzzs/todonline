@@ -1,32 +1,37 @@
 import Link from "next/link";
-import {
-	AiOutlineFire as Trending,
-	AiFillFire as TrendingActive,
-	AiOutlineHome as Home,
-	AiFillHome as HomeActive,
-	AiOutlinePlusCircle as Post,
-	AiFillPlusCircle as PostActive,
-} from "react-icons/ai";
+import Home from "../public/Home.svg";
+import Home2 from "../public/Home2.svg";
+import Post from "../public/Post.svg";
+import Logo from "../public/logotodo.svg";
+import { AiOutlineStar as Fav, AiFillStar as Fav2 } from "react-icons/ai";
+import { useRouter } from "next/router";
 
 export default function Nav() {
+	const location = useRouter();
 	return (
-		<nav className='border-b border-slate-300 py-2 px-2 bg-white max-h-[12vh]'>
-			<div className='flex justify-between lg:justify-between items-center mx-6 md:max-w-5xl md:mx-auto'>
+		<nav className='border-b border-slate-300 py-2 px-2 bg-white z-3 '>
+			<div className='flex justify-between lg:justify-between items-center mx-6 md:max-w-5xl md:mx-auto '>
 				<Link href='/'>
-					<button className='font-semibold tracking-wide text-[24px] italic none selection:b-none'>
-						TodONline
-					</button>
+					<Logo className='h-[50px] w-[150px] cursor-pointer'></Logo>
 				</Link>
-				<div className='flex text-[32px] gap-3'>
-					<button>
-						<Trending></Trending>
-					</button>
+				<div className='flex gap-2 text-[22px]'>
+					<Link href='/'>
+						<button>
+							{location.pathname === "/" ? <Home2 /> : <Home />}
+						</button>
+					</Link>
 					<button>
 						<Post></Post>
 					</button>
-					<button>
-						<Home></Home>
-					</button>
+					<Link href='favorites'>
+						<button>
+							{location.pathname === "/favorites" ? (
+								<Fav2 className='text-[25px]' />
+							) : (
+								<Fav className='text-[25px]' />
+							)}
+						</button>
+					</Link>
 				</div>
 				<ul className='gap-2 '>
 					<Link href={"auth/login"}>

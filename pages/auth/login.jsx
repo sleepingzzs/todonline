@@ -20,9 +20,9 @@ export default function Login() {
 		>
 			<div className='flex border-x border-t py-5 pl-10 rounded-t-lg text-gray-700 bg-white border-slate-300'>
 				<Link href={"/"}>
-					<button className='flex flex-row text-sm'>
+					<button className='flex flex-row text-sm gap-1'>
 						<Back className='text-xl'></Back>
-						{"Go back"}
+						Go back
 					</button>
 				</Link>
 			</div>
