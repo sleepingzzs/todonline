@@ -12,7 +12,9 @@ export default function Nav() {
 		<nav className='border-b border-slate-300 py-2 px-2 bg-white z-3 '>
 			<div className='flex justify-between lg:justify-between items-center mx-6 md:max-w-5xl md:mx-auto '>
 				<Link href='/'>
-					<Logo className='h-[50px] w-[175px] cursor-pointer'></Logo>
+					<div>
+						<Logo className='h-[50px] w-[175px] cursor-pointer'></Logo>
+					</div>
 				</Link>
 				<div className='flex gap-2 text-[24px]'>
 					<Link href='/'>
