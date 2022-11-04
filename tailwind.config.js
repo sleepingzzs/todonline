@@ -7,8 +7,11 @@ module.exports = {
 	theme: {
 		extend: {
 			screens: {
-				lg: {
-					max: "1200px",
+				phone: {
+					max: "727px",
+				},
+				tab: {
+					max: "1028px",
 				},
 			},
 			fontFamily: {

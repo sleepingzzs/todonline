@@ -11,7 +11,7 @@ export default function Layout({ children }) {
 				<title>todONline</title>
 			</Head>
 			{!showNav && <Nav />}
-			<main className='max-w-5xl mx-auto'>{children}</main>
+			<main className='max-w-5xl mx-auto tab:mx-2'>{children}</main>
 		</div>
 	);
 }
