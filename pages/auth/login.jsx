@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { FcGoogle as Google } from "react-icons/fc";
 import { FaGithub as Github } from "react-icons/fa";
-import { signIn, signOut } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import { IoArrowBackCircle as Back } from "react-icons/io5";
+import Router from "next/router";
 
 export default function Login() {
 	function githubLogin() {
@@ -13,6 +14,8 @@ export default function Login() {
 			callbackUrl: "http://localhost:3000",
 		});
 	}
+	const { data: session } = useSession();
+	if (session) Router.push("/");
 	return (
 		<div
 			className='flex flex-col justify-center mt-0 h-screen align-middle p-10 rounded-lg max-w-[550px] mx-auto'
