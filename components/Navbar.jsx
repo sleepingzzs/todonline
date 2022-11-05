@@ -58,7 +58,7 @@ export default function Nav() {
 						</Link>
 					</ul>
 					{!session ? (
-						<ul className='flex flex-row'>
+						<ul className='flex flex-row items-center'>
 							<li>
 								<Link href='/auth/login'>
 									<button className='py-2 px-3 bg-cyan-500 text-white rounded-lg '>
