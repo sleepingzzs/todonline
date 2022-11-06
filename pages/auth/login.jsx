@@ -4,6 +4,7 @@ import { FaGithub as Github } from "react-icons/fa";
 import { signIn, useSession } from "next-auth/react";
 import { IoArrowBackCircle as Back } from "react-icons/io5";
 import Router from "next/router";
+import { useEffect } from "react";
 
 export default function Login() {
 	function githubLogin() {
@@ -15,10 +16,11 @@ export default function Login() {
 		});
 	}
 	const { data: session } = useSession();
+
 	if (session) Router.push("/");
 	return (
 		<div
-			className='flex flex-col justify-center mt-0 h-screen align-middle p-10 rounded-lg max-w-[550px] mx-auto'
+			className='flex flex-col justify-center mt-0 h-screen align-middle rounded-lg max-w-[475px] mx-auto'
 			id='login'
 		>
 			<div className='flex border-x border-t py-5 pl-10 rounded-t-lg text-gray-700 bg-white border-slate-300'>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
+import { useEffect } from "react";
 
 import { FaBars } from "react-icons/fa";
 import { BiChevronDown } from "react-icons/bi";
@@ -19,6 +20,11 @@ export default function Nav() {
 	const router = useRouter();
 	const { data: session } = useSession();
 
+	useEffect(() => {
+		if (session) console.log(session.user);
+		// signOut();
+	}, []);
+
 	return (
 		<nav className='bg-white border-slate-200 border'>
 			<div className='flex flex-row justify-between max-w-5xl mx-auto py-2 tab:mx-2'>
@@ -27,7 +33,7 @@ export default function Nav() {
 						<Logo className='h-[50px] w-[175px] cursor-pointer' />
 					</li>
 				</ul>
-				<div className='flex flex-row gap-10 phone:hidden'>
+				<div className='flex flex-row gap-10 phone:hidden items-center'>
 					<ul className='flex flex-row gap-3 text-[24px] items-center'>
 						<Link href='/'>
 							<li className='cursor-pointer'>
@@ -56,7 +62,22 @@ export default function Nav() {
 								)}
 							</li>
 						</Link>
+						<li></li>
 					</ul>
+					{session ? (
+						<ul className='cursor-pointer hover:bg-slate-100 rounded-lg'>
+							<li className='flex flex-row gap-1 items-center'>
+								<img
+									src={session.user.image}
+									alt='pfp'
+									className='h-[30px] w-[30px] bg-slate-100 rounded-full'
+								/>
+								<h1>
+									<BiChevronDown />
+								</h1>
+							</li>
+						</ul>
+					) : null}
 					{!session ? (
 						<ul className='flex flex-row items-center'>
 							<li>
@@ -67,23 +88,7 @@ export default function Nav() {
 								</Link>
 							</li>
 						</ul>
-					) : (
-						<ul className='flex flex-row items-center gap-2 hover:bg-slate-100 px-3 rounded-lg cursor-pointer'>
-							<li>
-								<img
-									src={session.user.image}
-									alt='pfp'
-									className='h-8 w-8 bg-slate-100 rounded-full'
-								/>
-							</li>
-							<li className='flex flex-row gap-3 items-center'>
-								<h1 className='max-w-3'>{session.user.name}</h1>
-								<h1>
-									<BiChevronDown />
-								</h1>
-							</li>
-						</ul>
-					)}
+					) : null}
 				</div>
 				<button className='text-[22px] hidden phone:block'>
 					<FaBars />
