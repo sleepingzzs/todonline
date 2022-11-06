@@ -7,7 +7,7 @@ import Router from "next/router";
 
 export default function Login() {
 	function githubLogin() {
-		signIn("github", { callbackUrl: "http://todonline.vercel.app" });
+		signIn("github", { callbackUrl: "https://todonline.vercel.app" });
 	}
 	function googleLogin() {
 		signIn("google", {
