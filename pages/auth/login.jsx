@@ -7,11 +7,11 @@ import Router from "next/router";
 
 export default function Login() {
 	function githubLogin() {
-		signIn("github", { callbackUrl: "http://localhost:3000" });
+		signIn("github", { callbackUrl: "http://todonline.vercel.app" });
 	}
 	function googleLogin() {
 		signIn("google", {
-			callbackUrl: "http://localhost:3000",
+			callbackUrl: "https://todonline.vercel.app",
 		});
 	}
 	const { data: session } = useSession();
