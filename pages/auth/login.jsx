@@ -19,11 +19,8 @@ export default function Login() {
 
 	if (session) Router.push("/");
 	return (
-		<div
-			className='flex flex-col justify-center mt-0 h-screen align-middle rounded-lg max-w-[475px] mx-auto'
-			id='login'
-		>
-			<div className='flex border-x border-t py-5 pl-10 rounded-t-lg text-gray-700 bg-white border-slate-300'>
+		<div className='flex flex-col justify-center mt-0 h-screen align-middle rounded-lg max-w-[475px] mx-auto'>
+			<div className='flex border-x border-t py-5 pl-10 rounded-t-lg text-gray-700 bg-white border-slate-200'>
 				<Link href={"/"}>
 					<button className='flex flex-row text-sm gap-1'>
 						<Back className='text-xl'></Back>
@@ -31,10 +28,10 @@ export default function Login() {
 					</button>
 				</Link>
 			</div>
-			<div className='border-x border-b px-10 pb-10 pt-0 rounded-b-lg bg-white border-slate-300'>
-				<h2 className='text-[26px] font-semibold'>
+			<div className='border-x border-b px-10 pb-10 pt-0 rounded-b-lg bg-white border-slate-200'>
+				<h1 className='text-[26px] font-semibold'>
 					Sign up and start posting today!
-				</h2>
+				</h1>
 				<form className='flex flex-col my-7'>
 					<h4>Email</h4>
 					<input
