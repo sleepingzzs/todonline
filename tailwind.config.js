@@ -7,6 +7,12 @@ module.exports = {
 	theme: {
 		extend: {
 			screens: {
+				xsmPhone: {
+					max: "305",
+				},
+				smPhone: {
+					max: "368px",
+				},
 				phone: {
 					max: "727px",
 				},
