@@ -21,10 +21,7 @@ export default function _404() {
 		<div className='flex flex-row items-center h-[90vh] align-middle justify-center'>
 			<h1 className='border-r p-5'>404</h1>
 			<div className='p-5'>
-				<h1>
-					Page does not exist! Redirecting to home in... {seconds}{" "}
-					seconds
-				</h1>
+				<h1>Back to home in... {seconds}s</h1>
 			</div>
 		</div>
 	);

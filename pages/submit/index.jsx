@@ -1,12 +1,8 @@
 import Link from "next/link";
 import { IoArrowBackCircle as Back } from "react-icons/io5";
-import {
-	AiOutlineFileText as Description,
-	AiFillFileText as Description2,
-	AiOutlinePlus as Add,
-} from "react-icons/ai";
+import { AiOutlinePlus as Add } from "react-icons/ai";
 import { FaTrash as Delete } from "react-icons/fa";
-
+import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 
 export default function Submit() {
@@ -37,6 +33,7 @@ export default function Submit() {
 							<div className='flex flex-col'>
 								<h1>Name</h1>
 								<input
+									autoComplete='off'
 									name='name'
 									{...register("name", { required: true })}
 									className='border-2 focus:outline-none h-10 w-[352px] rounded-lg bg-white smPhone:w-[285px] xsmPhone:w-[175px]'
@@ -61,6 +58,7 @@ export default function Submit() {
 							<h1 className='pt-10'>Todo</h1>
 							<div className='flex flex-row'>
 								<input
+									autoComplete='off'
 									name='todo1'
 									{...register("todo1", { required: true })}
 									className='border-y-2 border-l-2 focus:outline-none h-10 rounded-y-lg rounded-l-lg bg-white smPhone:w-[250px] xsmPhone:w-[175px]'
@@ -73,6 +71,7 @@ export default function Submit() {
 							</div>
 							<div className='flex flex-row'>
 								<input
+									autoComplete='off'
 									name='todo2'
 									{...register("todo2", { required: true })}
 									className='border-y-2 border-l-2 focus:outline-none h-10 rounded-y-lg rounded-l-lg bg-white smPhone:w-[250px] xsmPhone:w-[5px]'
@@ -85,6 +84,7 @@ export default function Submit() {
 							</div>
 							<div className='flex flex-row'>
 								<input
+									autoComplete='off'
 									name='todo3'
 									{...register("todo3", { required: true })}
 									className='border-y-2 border-l-2 focus:outline-none h-10 rounded-y-lg rounded-l-lg bg-white smPhone:w-[250px] xsmPhone:w-[175px]'
